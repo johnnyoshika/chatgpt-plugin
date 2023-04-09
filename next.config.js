@@ -4,6 +4,15 @@ const nextConfig = {
     appDir: true,
   },
 
+  async rewrites() {
+    return [
+      {
+        source: '/openapi.json',
+        destination: '/api/openapi.json',
+      },
+    ];
+  },
+
   async headers() {
     return [
       {
