@@ -6,8 +6,8 @@ const swaggerHandler = withSwagger({
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'TODO Plugin',
-      description: `A plugin that allows the user to create and manage a TODO list using ChatGPT. If you do not know the user's username, ask them first before making queries to the plugin. Otherwise, use the username "global".`,
+      title: 'EXAMIND Assessment ChatGPT Plugin',
+      description: `A plugin that allows an instructor to view information about active assessments, including statistics and student attempts and scores. If the instructor doesn't like the points given for a particular student and question, and adjustment can be posted. Always ask the instructor for their email before making queries.`,
       version: '1.0',
     },
     servers: [

@@ -26,12 +26,19 @@ const nextConfig = {
         ],
       },
       {
-        // Specify that we allow all headers in CORS requests (especially important in preflight OPTIONS request).
-        // We don't need to specify Access-Control-Allow-Methods and Access-Control-Allow-Origin as they'll be specified automatically.
-        source: '/api/todos/:username*',
+        // CORS with allowed headers and methods is needed in api routes for ChatGPT
+        source: '/api/assessments/:path*',
         headers: [
           {
             key: 'Access-Control-Allow-Headers',
+            value: '*',
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET, PUT, POST, DELETE',
+          },
+          {
+            key: 'Access-Control-Allow-Origin',
             value: '*',
           },
         ],
